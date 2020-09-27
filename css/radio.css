@@ -9,6 +9,7 @@ a{
 h4{
   font-weight: bold;
 }
+/* Nav-Bar */
 #search-bar{
   width: 100%;
 }
@@ -69,9 +70,9 @@ div.song-item{
   cursor:pointer;
 }
 div.song-item:hover{
-  background-color:white;
-  box-shadow: 1px 1px 2px;
-  padding: 10px;
+  background-color: #C3C3C3;
+  box-shadow: 0.5px 0.5px 0.5px;
+  padding: 3px;
 }
 img.song-img{
   width: 50px;
