@@ -29,4 +29,9 @@ Construir una lista de 10 objetos con los datos mencionados anteriormente.
 
 *Diseño:
 
--Cambiar efecto del hover en items de la lista de canciones  
+ 	
+ 	*Anadir logo de Musicorum 
+	*Anadir animacion al logo de Musicorum
+	*Anadir efecto de cursor a tarjeta de artistas 
+ 
+ 
