@@ -46,10 +46,13 @@ div.appendChild(img);
 div.appendChild(h4);
 
 DZ.api('/artist/'+number, function(response){
-h4.innerText = response.name;
-img.src = response.picture_medium;
+  h4.innerText = response.name;
+  img.src = response.picture_medium;
+  if (response.name != undefined) {
+    document.getElementById('box-space').appendChild(div);
+  }
 });
-document.getElementById('box-space').appendChild(div);
+
 }
 
 displayBoxes()
