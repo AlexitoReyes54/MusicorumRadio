@@ -13,9 +13,12 @@ Tareas:
 	 
 *Diseño:
 
- 	
  	*Anadir logo de Musicorum 
 	*Anadir animacion al logo de Musicorum
 	*Anadir efecto de cursor a tarjeta de artistas 
+ 	*Anadir modo oscuro
+	
+ *Funcionalidad:
  
- 
+ 	*Agregar boton de retroceder al buscar una cancion
+	*Anadir una seccion para el artista favorito 
