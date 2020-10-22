@@ -1,9 +1,17 @@
 body{
   background-color: #F4F4F4;
-  margin: 0px;
+  margin: 0px !important;
+  padding: 0px !important;
   color: white;
 
   background-color:rgb(18, 18, 22) ;
+}
+.col-md-10{
+  padding: 0px !important;
+}
+
+div.move{
+  margin-left: 20px;
 }
 table{
   background-color: rgb(18, 18, 22) !important;
@@ -43,6 +51,8 @@ div.scrollmenu {
 
 nav{
   display: flex;
+  width: 100%;
+  background-color: red;
 }
 input.search{
   width: 80%;
@@ -239,3 +249,10 @@ div.genre-box{
   border-radius: 5px;
   color: white;
 }
+
+/**/
+@media (max-width: 767.98px) {
+  div.scrollmenu {
+    overflow:scroll;
+  }
+ }
