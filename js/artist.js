@@ -55,4 +55,4 @@ DZ.api('/artist/'+number, function(response){
 
 }
 
-displayBoxes()
+//displayBoxes()

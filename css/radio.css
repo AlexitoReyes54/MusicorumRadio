@@ -1,7 +1,11 @@
 body{
   background-color: #F4F4F4;
   margin: 0px;
+  color: white;
+  
+  background-color: rgb(18, 18, 22);
 }
+
 a{
   text-decoration: none;
   color: black;
@@ -32,23 +36,48 @@ div.scrollmenu {
 }
 
 /* Artist box*/
-div.artist-box{
-  background-color: white;
-  width: 300px;
-  height: 90px;
-  display: flex;
-  align-items:center;
-  justify-content:flex-start;
+div.black{
+  background-color: rgba(0,0,0,0.1);
+  height: 250px ;
+  width: 250px ;
   padding: 20px;
+  display: flex;
+  align-items:flex-end;
+  justify-content:center;
+  border-radius: 5px;
+  padding: 20px;
+}
+div.black:hover{
+  background-color: rgba(0,0,0,0.2) !important;
+  background-color: red;
+}
+div.artist-box{
+  height: 250px ;
+  width: 250px ;
+  background-color: #000 !important;
+  background-image: url("https://cdns-images.dzcdn.net/images/artist/f2bc007e9133c946ac3c3907ddc5d2ea/250x250-000000-80-0-0.jpg") !important;
   margin:10px;
   border-radius: 5px;
-  box-shadow: 3px 2px 10px;
+  color: white;
 }
 div.artist-box:hover{
   background-color: black;
-  color: white;
+
 }
+h4.artist-text{
+  font-weight: bolder;
+  font-weight: 900;
+  border-color: red;
+
+  text-emphasis-color: red;
+  font-size: 40px;
+}
+h4.artist-text:hover{
+
+}
+
 img.artist-box-img{
+  display: none;
   width: 70px;
   height: 70px;
   margin-right: 20px;
@@ -165,4 +194,10 @@ position: fixed;
 .player-icon{
   width: 20px;
   width: 20px;
+}
+
+/* INTERFACE EXPERIMENT*/
+
+.artist-box{
+
 }

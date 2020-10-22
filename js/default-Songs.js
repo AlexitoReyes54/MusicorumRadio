@@ -59,4 +59,4 @@ function buildSongItem(number) {
 
 
 //buildSongItem(randomNumber7digit())
-displaySongs()
+//displaySongs()
