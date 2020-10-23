@@ -97,7 +97,8 @@ div.artist-box{
   height: 250px ;
   width: 250px ;
   background-color: #000 !important;
-  background-image: url("https://cdns-images.dzcdn.net/images/artist/f2bc007e9133c946ac3c3907ddc5d2ea/250x250-000000-80-0-0.jpg") !important;
+  /*background-image: url("https://cdns-images.dzcdn.net/images/artist/f2bc007e9133c946ac3c3907ddc5d2ea/250x250-000000-80-0-0.jpg") !important;
+*/
   margin:10px;
   border-radius: 150px;
   color: white;
