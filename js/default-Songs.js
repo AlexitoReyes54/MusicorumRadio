@@ -23,7 +23,7 @@ function randomNumber7digit() {
 
 function buildSongItem(number,index) {
   let tr = document.createElement("tr");
-  tr.addEventListener("click",hello(number) );
+  tr.onclick = function() {hello(number)};
 
   let th = document.createElement("th");
   th.style.scope = "row"
@@ -56,6 +56,7 @@ function buildSongItem(number,index) {
 }
 
 function hello(number) {
+  //alert("ok ok")
   DZ.player.playTracks([number])
 }
 
