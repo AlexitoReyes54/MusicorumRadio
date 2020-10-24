@@ -3,7 +3,7 @@ body{
   margin: 0px !important;
   padding: 0px !important;
   color: white;
-  height: 90;
+  height: 100px;
   background-color:rgb(18, 18, 22) ;
 }
 .col-md-10{
@@ -167,6 +167,7 @@ p.song-artist{
 div.genre-box{
   height: 250px ;
   width: 250px ;
+
   background-color: #000 !important;
   /*background-image: url("https://cdns-images.dzcdn.net/images/misc/b36ca681666d617edd0dcb5ab389a6ac/250x250-000000-80-0-0.jpg") !important;
 */
@@ -192,7 +193,9 @@ div.black1:hover{
   background-color: rgba(0,0,0,0.2) !important;
   background-color: red;
 }
-
+#box-space-genre{
+  margin-bottom: 100px;
+}
 /**/
 @media (max-width: 767.98px) {
   div.scrollmenu {
