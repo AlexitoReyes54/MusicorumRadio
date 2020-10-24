@@ -1,8 +1,19 @@
 /* INITIALIZE THE API */
-DZ.init({
-  appId  : '439622',
-  channelUrl : 'http://127.0.0.1:3000/channel.html'
-});
+
+   DZ.init({
+     appId  : '439622',
+     channelUrl : 'http://127.0.0.1:3000/channel.html',
+     player: {
+   			container: 'player',
+         layout:'dark',
+   			height : 90,
+         format:'Classic',
+         color:'eb9605',
+   			onload : function(){console.log("player on");}
+   		}
+   });
+
+
 
 /* MAIN FUNTIONS */
 function displayBoxes() {
@@ -55,4 +66,4 @@ DZ.api('/artist/'+number, function(response){
 
 }
 
-displayBoxes()
+//displayBoxes()

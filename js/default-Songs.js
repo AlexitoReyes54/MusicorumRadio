@@ -1,10 +1,12 @@
 /*GLOBAL VARIABLE */
 var songs = []
-
+let index = 1;
 
 function displaySongs() {
+  let songs = [3135556,1096233612,75262459,512477022,75212170,92872156]
   for (var i = 0; i < 6; i++) {
-    buildSongItem(randomNumber7digit())
+    buildSongItem(songs[i],i+1)
+
   }
 }
 
@@ -19,37 +21,33 @@ function randomNumber7digit() {
 }
 
 
-function buildSongItem(number) {
-  let div = document.createElement("div");
-  div.classList.add("song-item");
-  div.id = number
+function buildSongItem(number,index) {
+  let tr = document.createElement("tr");
+  tr.addEventListener("click",hello(number) );
 
-  let img = document.createElement("img");
-  img.classList.add("song-img");
-  img.alt = "albun"
+  let th = document.createElement("th");
+  th.style.scope = "row"
 
-  let divText = document.createElement("div");
-  divText.classList.add("song-item-text");
 
-  let h5 = document.createElement("h5");
-  h5.classList.add("song-name");
+  let td1 = document.createElement("td");
+  let td2 = document.createElement("td");
+  let td3 = document.createElement("td");
 
-  let p = document.createElement("p");
-  p.classList.add("song-artist");
-
-  div.appendChild(img);
-  div.appendChild(divText);
-  divText.appendChild(h5);
-  divText.appendChild(p);
+  tr.appendChild(th);
+  tr.appendChild(td1);
+  tr.appendChild(td2);
+  tr.appendChild(td3);
 
 
   DZ.api('/track/'+number, function(response){
-  h5.innerText = response.title;
-  p.innerText = response.artist.name;
-  img.src = response.artist.picture_medium;
+  td1.innerText = response.title;
+  td2.innerText = response.artist.name;
+  let duration = Math.floor(response.duration/60)
+  td3.innerText = duration +":00";
 
   if (response.title != undefined) {
-    document.getElementById('song-list').appendChild(div);
+    th.innerText = index;
+    document.getElementById('songs-list').appendChild(tr);
   }
 
   });
@@ -57,6 +55,10 @@ function buildSongItem(number) {
 
 }
 
+function hello(number) {
+  DZ.player.playTracks([number])
+}
 
+//hello("jj")
 //buildSongItem(randomNumber7digit())
-//displaySongs()
+displaySongs()

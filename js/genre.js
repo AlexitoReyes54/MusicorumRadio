@@ -36,4 +36,4 @@ DZ.api('/genre/'+number, function(response){
 
 }
 
-displayGenreBoxes()
+//displayGenreBoxes()
