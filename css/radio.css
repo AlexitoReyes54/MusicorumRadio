@@ -5,6 +5,7 @@ body{
   color: white;
   height: 100px;
   background-color:rgb(18, 18, 22) ;
+  font-family: 'Roboto Mono', monospace;
 }
 .col-md-10{
   padding: 0px !important;
@@ -14,6 +15,7 @@ div.move{
   margin-left: 20px;
 }
 table{
+  font-family: 'Roboto Mono', Thin;
   background-color: rgb(18, 18, 22) !important;
 }
 a{

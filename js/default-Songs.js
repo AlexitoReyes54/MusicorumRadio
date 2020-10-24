@@ -1,12 +1,17 @@
 /*GLOBAL VARIABLE */
-var songs = []
 let index = 1;
 
 function displaySongs() {
-  let songs = [3135556,1096233612,75262459,512477022,75212170,92872156]
+  let songs = tracks.topSongs;
   for (var i = 0; i < 6; i++) {
     buildSongItem(songs[i],i+1)
 
+  }
+}
+
+function displaySongsDetail(array) {
+  for (var i = 0; i < 6; i++) {
+    buildSongItem(array[i],i+1)
   }
 }
 

@@ -13,8 +13,9 @@ function buildGenreBox(number) {
 
 let div = document.createElement("div");
 div.classList.add("genre-box");
+div.onclick = function() {showGenreMusic(number)};
 //div.style.backgroundImage = "url(https://cdns-images.dzcdn.net/images/artist/f2bc007e9133c946ac3c3907ddc5d2ea/250x250-000000-80-0-0.jpg)"
-//img.src = obj.picture;
+
 let black1 =  document.createElement("div");
 black1.classList.add("black1");
 
@@ -37,3 +38,63 @@ DZ.api('/genre/'+number, function(response){
 }
 
 displayGenreBoxes()
+
+function showGenreMusic(genre) {
+  let root = document.getElementById('root');
+  root.style.margin = "0px";
+
+  DZ.api('/genre/'+genre, function(response){
+    root.innerHTML = '  <div id="mainImg" class="main-image">\
+        <p href="#"> Volver </p>\
+        <div  class="black-main">\
+          <h1 id="mainText" class="text-main">Pop Music</h1>\
+        </div>\
+      </div>\
+    <table class="table table-hover table-dark table-detail">\
+      <thead>\
+    <tr>\
+      <th scope="col">#</th>\
+      <th scope="col">Song</th>\
+      <th scope="col">Artist</th>\
+      <th scope="col">Length</th>\
+    </tr>\
+  </thead>\
+    <tbody id="songs-list">\
+      <tr>\
+        <th scope="row">1</th>\
+        <td>Friendzone</td>\
+        <td>Twenty one Pilots</td>\
+        <td>3:55</td>\
+      </tr>\
+    </tbody>\
+    </table>';
+
+    let bigImage = document.getElementById('mainImg')
+    let mainText = document.getElementById('mainText')
+    let list = document.getElementById('songs-list')
+    mainText.innerText = response.name;
+    bigImage.style.backgroundImage = "url("+ response.picture_xl +")"
+
+    displaySongsDetail(identifyGenre(response.name))
+  });
+
+}
+
+//showGenreMusic()
+
+function identifyGenre(genre) {
+if (genre == "Rock") {
+  return tracks.genres.Rock;
+}else if (genre == "Pop") {
+  return tracks.genres.Pop;
+}else if (genre == "Jazz") {
+  return tracks.genres.Jazz;
+}else if (genre == "Reggaetón") {
+  return tracks.genres.Reggaetón;
+}else if (genre == "Latino") {
+  return tracks.genres.Latino;
+}else if (genre == "Dance") {
+  return tracks.genres.Dance;
+}
+
+}
