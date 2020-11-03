@@ -187,6 +187,12 @@ h4.genre-text{
 #box-space-genre{
   margin-bottom: 100px;
 }
+
+.logo-img{
+  height: 45px;
+  width: 110px;
+  margin: 5px 5px 5px 5px;
+}
 /**/
 @media (max-width: 767.98px) {
   div.scrollmenu {
