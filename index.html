@@ -10,68 +10,68 @@
     <link rel="stylesheet" href="./css/index.css">
 
 <!-- Optional theme -->
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="./awesome/css/font-awesome.min.css">
   </head>
   <body>
 
     <!--NavBar-->
     <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand">Navbar</a>
-      <a>Login</a>
-      <a>About us</a>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Radio</button>
+      <a class="navbar-brand "> <h5>Musicorum</h5> </a>
+
+        <button id="radioBtn"  onmouseover="btnAnimation()" onmouseout="btnNoAnimation()" class="btn btn-outline-success my-2 my-sm-0 " type="submit">Go to Radio</button>
     </nav>
 
     <!--Carousel-->
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
-        
+
         <div class="carousel-item active">
 
-            <div class="d-block w-100 container-fluid slide1"> 
-              <div class="row"> 
-                <div class="col-md-8 slide-text-box"> 
+            <div class="d-block w-100 container-fluid slide1">
+              <div class="row">
+                <div class="col-md-8 slide-text-box">
                   <h2>Ejemplo</h2>
                     <p>Los términos spam, correo basura,correo no deseado o correo no solicitadohacen referencia a los mensajes de correo electrónico no solicitados,no deseados o con remitente no conocido, habitualmente</p>
                 </div>
                 <div class="col-md-4 slide-img-box">
-                  <img class="slide-img" src="./img/pajaritovisko.svg" alt="">    
+                  <img class="slide-img" src="./img/pajaritovisko.svg" alt="">
                 </div>
               </div>
-            </div>  
+            </div>
 
         </div>
-        
+
         <div class="carousel-item">
 
-          <div class="d-block w-100 container-fluid slide1"> 
-            <div class="row"> 
-              <div class="col-md-8 slide-text-box"> 
+          <div class="d-block w-100 container-fluid slide1">
+            <div class="row">
+              <div class="col-md-8 slide-text-box">
                 <h2>Mamelo el mejol</h2>
                   <p>Los términos spam, correo basura,correo no deseado o correo no solicitadohacen referencia a los mensajes de correo electrónico no solicitados,no deseados o con remitente no conocido, habitualmente</p>
               </div>
               <div class="col-md-4 slide-img-box">
-                <img class="slide-img" src="./img/mamelo.svg" alt="">    
+                <img class="slide-img" src="./img/mamelo.svg" alt="">
               </div>
             </div>
-          </div>   
+          </div>
 
         </div>
 
         <div class="carousel-item">
 
-          <div class="d-block w-100 container-fluid slide1"> 
-            <div class="row"> 
-              <div class="col-md-8 slide-text-box"> 
+          <div class="d-block w-100 container-fluid slide1">
+            <div class="row">
+              <div class="col-md-8 slide-text-box">
                 <h2>lo disca la para</h2>
                   <p>Los términos spam, correo basura,correo no deseado o correo no solicitadohacen referencia a los mensajes de correo electrónico no solicitados,no deseados o con remitente no conocido, habitualmente</p>
               </div>
               <div class="col-md-4 slide-img-box">
-                <img class="slide-img" src="./img/lodisca.svg" alt="">    
+                <img class="slide-img" src="./img/lodisca.svg" alt="">
               </div>
             </div>
-          </div> 
-        
+          </div>
+
         </div>
       </div>
     </div>
@@ -79,21 +79,25 @@
     <!--tittles Text-->
     <div class="container-fluid">
       <div class="row text-rw">
-        <h1>¿Quieres escuchar tu musica favorita?</h1>
+        <h1 class="">¿Quieres escuchar tu canción favorita?</h1>
+        <p>Go to the radio</p>
       </div>
     </div>
 
        <!--Music Boxes-->
        <div class="container">
         <div class="row">
-          <div class="col-md-4 box-box">
-            <img src="./daft.jpg" alt="Mamelo el mejol" class="index-box">
+          <div onmouseover="showPlay(this)" onmouseout="hidePlay(this)" class="col-md-4 box-box">
+            <div  class="shadow"> <p>Play Albun</p> <i class="fa fa-play-circle-o fa-5x" aria-hidden="true"></i> </div>
+            <img src="https://cdns-images.dzcdn.net/images/cover/d232df994a69fec325000bcaa5177e26/250x250-000000-80-0-0.jpg" alt="Mamelo el mejol" class="index-box">
           </div>
-          <div class="col-md-4 box-box">
-            <img src="./daft.jpg" alt="Mamelo el mejol" class="index-box">
+          <div onmouseover="showPlay(this)" onmouseout="hidePlay(this)" class="col-md-4 box-box">
+            <div  class="shadow"><p>Play Albun</p> <i class="fa fa-play-circle-o fa-5x" aria-hidden="true"></i> </div>
+            <img src="https://e-cdns-images.dzcdn.net/images/cover/f3155137f321a5eadefd47888ba18742/250x250-000000-80-0-0.jpg" alt="Mamelo el mejol" class="index-box">
           </div>
-          <div class="col-md-4 box-box">
-            <img src="./daft.jpg" alt="Mamelo el mejol" class="index-box">
+          <div onmouseover="showPlay(this)" onmouseout="hidePlay(this)" class="col-md-4 box-box">
+            <div  class="shadow"> <p>Play Albun</p><i class="fa fa-play-circle-o fa-5x" aria-hidden="true"></i> </div>
+            <img src="https://e-cdns-images.dzcdn.net/images/cover/8a6776089800a0933879516a01f8e5b7/250x250-000000-80-0-0.jpg" alt="Mamelo el mejol" class="index-box">
           </div>
         </div>
       </div>
@@ -102,7 +106,7 @@
         <!--Texto-->
         <div class="container">
           <div class="row">
-      
+
             <div class="col-md-8">
               <h1>Testo</h1>
               <p>testo pararfo</p>
@@ -119,6 +123,9 @@
    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="https://cdns-files.dzcdn.net/js/min/dz.js"></script>
+    <script src="./js/animations.js">  </script>
+
+
   </body>
 
 </html>

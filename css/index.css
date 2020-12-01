@@ -1,14 +1,34 @@
 body{
-    background-color:rgb(18, 18, 22);
+    background-color:	#282828;
     color: white;
+    font-family: 'Roboto Mono', monospace;
 }
+/*
+    COLORS
+
+    orange: #E3651C
+    purple:  #4A469E
+    magenta: #847FEB
+    light green: #7DEB67
+    dark green:  #5B9E4D
+
+ */
+
 
 .slide1{
     background: linear-gradient(83.73deg, #06024d 0%,
-     rgba(16, 14, 51, 0.866) 0%, 
+     rgba(16, 14, 51, 0.866) 0%,
      rgba(255, 255, 255, 0) 100%)
      rgba(12, 42, 116, 0.76);
-     color: white;
+
+     background: rgb(18,18,22);
+background: linear-gradient(331deg, rgba(18,18,22,0.7609418767507002) 6%, rgba(125,235,103,1) 100%);
+
+background: rgb(91,158,77);
+background: linear-gradient(331deg, rgba(91,158,77,1) 6%, rgba(125,235,103,1) 100%);
+
+
+    color: white;
      height: 400px;
 }
 
@@ -39,10 +59,39 @@ body{
     display:flex;
     justify-content: center;
     align-items: center;
+
+}
+.shadow{
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0,0.5);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  visibility: hidden;
+}
+.shadowV{
+  width: 300px;
+  height: 100%;
+  flex-direction: column;
+  position: absolute;
+  background-color: rgba(0, 0, 0,0.5);
+  align-items: center;
+  display:flex;
+  justify-content: center;
+  visibility:visible;
+}
+.fa-play-circle-o{
+  visibility
 }
 
 .text-rw{
     display:flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }

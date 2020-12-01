@@ -9,5 +9,10 @@ var tracks = {
           Latino:["latino"],
           Dance:["dance"],
 
-        }
+        },
+  index_boxes:["https://e-cdns-images.dzcdn.net/images/cover/f3155137f321a5eadefd47888ba18742/250x250-000000-80-0-0.jpg",
+                "https://cdns-images.dzcdn.net/images/cover/d232df994a69fec325000bcaa5177e26/250x250-000000-80-0-0.jpg",
+                "https://e-cdns-images.dzcdn.net/images/cover/8a6776089800a0933879516a01f8e5b7/250x250-000000-80-0-0.jpg",
+                
+              ]
 }
