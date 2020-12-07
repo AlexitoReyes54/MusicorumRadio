@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Musicorum</title>
 
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/index.css">
@@ -19,7 +19,9 @@
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand "> <h5>Musicorum</h5> </a>
 
-        <button id="radioBtn"  onmouseover="btnAnimation()" onmouseout="btnNoAnimation()" class="btn btn-outline-success my-2 my-sm-0 " type="submit">Go to Radio</button>
+      <a href="./radio.html">
+        <button id="radioBtn"  onmouseover="btnAnimation()" onmouseout="btnNoAnimation()" class="btn btn-outline-success my-2 my-sm-0 " type="submit">Go to Radio <i class="fa fa-music" aria-hidden="true"></i>  </button>
+       </a>
     </nav>
 
     <!--Carousel-->
@@ -35,7 +37,7 @@
                     <p>Los términos spam, correo basura,correo no deseado o correo no solicitadohacen referencia a los mensajes de correo electrónico no solicitados,no deseados o con remitente no conocido, habitualmente</p>
                 </div>
                 <div class="col-md-4 slide-img-box">
-                  <img class="slide-img" src="./img/pajaritovisko.svg" alt="">
+                  <img class="slide-img" src="./img/pajarito.svg" alt="">
                 </div>
               </div>
             </div>
@@ -80,7 +82,7 @@
     <div class="container-fluid">
       <div class="row text-rw">
         <h1 class="">¿Quieres escuchar tu canción favorita?</h1>
-        <p>Go to the radio</p>
+        <button class="contact-btn" type="button" name="button">Ir a la Radio</button>
       </div>
     </div>
 
@@ -89,15 +91,15 @@
         <div class="row">
           <div onmouseover="showPlay(this)" onmouseout="hidePlay(this)" class="col-md-4 box-box">
             <div  class="shadow"> <p>Play Albun</p> <i class="fa fa-play-circle-o fa-5x" aria-hidden="true"></i> </div>
-            <img src="https://cdns-images.dzcdn.net/images/cover/d232df994a69fec325000bcaa5177e26/250x250-000000-80-0-0.jpg" alt="Mamelo el mejol" class="index-box">
+            <img src="https://e-cdns-images.dzcdn.net/images/cover/406f99fbbb8f44475d4507e373e46f5c/250x250-000000-80-0-0.jpg" alt="Mamelo el mejol" class="index-box">
           </div>
           <div onmouseover="showPlay(this)" onmouseout="hidePlay(this)" class="col-md-4 box-box">
             <div  class="shadow"><p>Play Albun</p> <i class="fa fa-play-circle-o fa-5x" aria-hidden="true"></i> </div>
-            <img src="https://e-cdns-images.dzcdn.net/images/cover/f3155137f321a5eadefd47888ba18742/250x250-000000-80-0-0.jpg" alt="Mamelo el mejol" class="index-box">
+            <img src="https://cdns-images.dzcdn.net/images/cover/b310009833478f1033113a882f5f725c/250x250-000000-80-0-0.jpg" alt="Mamelo el mejol" class="index-box">
           </div>
           <div onmouseover="showPlay(this)" onmouseout="hidePlay(this)" class="col-md-4 box-box">
             <div  class="shadow"> <p>Play Albun</p><i class="fa fa-play-circle-o fa-5x" aria-hidden="true"></i> </div>
-            <img src="https://e-cdns-images.dzcdn.net/images/cover/8a6776089800a0933879516a01f8e5b7/250x250-000000-80-0-0.jpg" alt="Mamelo el mejol" class="index-box">
+            <img src="https://e-cdns-images.dzcdn.net/images/cover/c42ab7469ac212b3b4a5f51d867a3688/250x250-000000-80-0-0.jpg" alt="Mamelo el mejol" class="index-box">
           </div>
         </div>
       </div>
@@ -105,18 +107,69 @@
 
         <!--Texto-->
         <div class="container">
-          <div class="row">
+          <div class="row info-box">
 
-            <div class="col-md-8">
-              <h1>Testo</h1>
-              <p>testo pararfo</p>
+            <div class="col-md-8 index-box-t1">
+              <h1 class="index-title">Listen to your fav Music</h1>
+                <p class="index-text">'lorem ipsum' will uncover
+                  many web sites still in their infancy. Various versions have evolved
+                  over the years, sometimes by accident, sometimes on purpose (injected
+                  humour and the like).
+                </p>
             </div>
             <div class="col-md-4">
-              <img src="./artist.jpg" alt="Mamelo el mejol" class="">
+              <img src="./img/modern.svg" alt="Mamelo el mejol" class="index-img">
             </div>
+          </div>
+
+          <div class="row info-box">
+
+            <div class="col-md-4">
+              <img src="./img/music.svg" alt="Mamelo el mejol" class="index-img">
+            </div>
+
+
+            <div class="col-md-8 index-box-t2">
+              <h1 class="index-title">Listen to your fav Music</h1>
+                <p class="index-text">'lorem ipsum' will uncover
+                  many web sites still in their infancy. Various versions have evolved
+                  over the years, sometimes by accident, sometimes on purpose (injected
+                  humour and the like).
+                </p>
+            </div>
+
           </div>
         </div>
 
+        <div class="container-fluid contact">
+          <h3>Contacta con nosotros</h3>
+          <button class="contact-btn" type="button" name="button">Ir a pagina de contacto</button>
+        </div>
+
+<footer>
+  <div class="social">
+    <div class="network">
+      <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+    </div>
+
+    <div class="network">
+      <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+    </div>
+
+    <div class="network">
+      <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+    </div>
+  </div>
+
+  <div class="links">
+    <a href="#">Conctact *</a>
+    <a href="#">Information</a>
+    <a href="#">* Suport</a>
+  </div>
+
+  <p>Terms of use privecy policy</p>
+  <p>2020 Musicorum</p>
+</footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
