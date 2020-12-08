@@ -45,7 +45,7 @@ function showGenreMusic(genre) {
 
   DZ.api('/genre/'+genre, function(response){
     root.innerHTML = '  <div id="mainImg" class="main-image">\
-        <p href="#"> Volver </p>\
+        <p href="#" class="back" onclick="location.reload();"> Volver </p>\
         <div  class="black-main">\
           <h1 id="mainText" class="text-main">Pop Music</h1>\
         </div>\
@@ -73,7 +73,7 @@ function showGenreMusic(genre) {
     let mainText = document.getElementById('mainText')
     let list = document.getElementById('songs-list')
     mainText.innerText = response.name;
-    bigImage.style.backgroundImage = "url("+ response.picture_xl +")"
+    //bigImage.style.backgroundImage = "url("+ response.picture_medium +")"
 
     displaySongsDetail(identifyGenre(response.name))
   });
@@ -81,7 +81,7 @@ function showGenreMusic(genre) {
 }
 
 //showGenreMusic()
-
+//location.reload();
 function identifyGenre(genre) {
 if (genre == "Rock") {
   return tracks.genres.Rock;

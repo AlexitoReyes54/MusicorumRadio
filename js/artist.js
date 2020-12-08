@@ -1,5 +1,17 @@
 /* INITIALIZE THE API */
 
+
+function hello() {
+  document.getElementById("web-body").classList.add("invisible")  
+  setTimeout(function () {
+
+    document.getElementById("web-body").classList.remove("invisible")
+    document.getElementById("web-body").classList.add("visible")
+  }, 2000);
+}
+
+document.getElementById("web-body").addEventListener("onload",hello());
+
    DZ.init({
      appId  : '439622',
      channelUrl : 'http://127.0.0.1:3000/channel.html',

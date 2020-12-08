@@ -12,7 +12,7 @@ body{
 }
 
 div.move{
-  margin-left: 20px;
+  /*margin-left: 20px;*/
 }
 table{
   font-family: 'Roboto Mono', Thin;
@@ -54,20 +54,24 @@ div.scrollmenu {
 nav{
   display: flex;
   width: 100%;
-  background-color: red;
+
+
+
 }
 input.search{
-  width: 80%;
+  width:100%;
+  background-color: red;
   height: 50px;
   text-align: center;
   background-color: rgb(18, 18, 22);
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  border-bottom: 5px;
+  border-left-width: thin;
+  border-bottom-width: thin;
+  border-top-width: inherit;
+  border-right-width: inherit;
   border-color: #fff;
   color: #fff;
   font-size: 20px;
+      border-bottom-left-radius: 10px;
 }
 button.search-btn{
   width: 20%;
@@ -75,6 +79,7 @@ button.search-btn{
   border:0px;
   color: #fff;
   font-weight: bolder;
+  border-bottom-right-radius: 10px;
 }
 
 
@@ -116,7 +121,7 @@ h4.artist-text{
   border-color: red;
   margin-bottom: 20px;
   text-emphasis-color: red;
-
+  font-size: 1rem;
 }
 h4.artist-text:hover{
 
@@ -198,4 +203,11 @@ h4.genre-text{
   div.scrollmenu {
     overflow:scroll;
   }
+ }
+ .invisible{
+   visibility: hidden;
+ }
+
+ .visible{
+   visibility:visible;
  }

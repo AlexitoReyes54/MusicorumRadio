@@ -1,9 +1,10 @@
 .main-image{
-  height:200px;
+  height:250px;
   width:100%;
-  background-repeat:round;
 /*background-image:url("https://cdns-images.dzcdn.net/images/misc/44dfebf3cf943dd82759d9bd9063767a/1000x1000-000000-80-0-0.jpg");
 */font-family: 'Roboto Mono', monospace;
+background: rgb(50,97,200);
+background: linear-gradient(331deg, rgba(50,97,200,1) 6%, rgba(35,59,140,1) 100%);
 }
 .black-main{
   width:100%;
@@ -20,4 +21,7 @@
 }
 .table-detail{
   margin-bottom: 100px;
+}
+.back{
+  cursor: pointer;
 }
