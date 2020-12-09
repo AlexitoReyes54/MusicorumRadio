@@ -13,7 +13,6 @@ function hello() {
 document.getElementById("web-body").addEventListener("onload",hello());
 
    DZ.init({
-     appId  : '450622',
      channelUrl : 'http://127.0.0.1:3000/channel.html',
      player: {
    			container: 'player',
