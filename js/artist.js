@@ -1,8 +1,43 @@
 /* INITIALIZE THE API */
-DZ.init({
-  appId  : '439622',
-  channelUrl : 'http://127.0.0.1:3000/channel.html'
-});
+
+
+function hello() {
+  document.getElementById("web-body").classList.add("invisible")
+  setTimeout(function () {
+
+    document.getElementById("web-body").classList.remove("invisible")
+    document.getElementById("web-body").classList.add("visible")
+  }, 100);
+}
+
+document.getElementById("web-body").addEventListener("onload",hello());
+
+   DZ.init({
+     appId  : '450622',
+     channelUrl : 'http://127.0.0.1:3000/channel.html',
+     player: {
+   			container: 'player',
+         layout:'dark',
+   			height : 90,
+         format:'Classic',
+         color:'eb9605',
+   			onload : function(){console.log("player on");}
+   		}
+   });
+
+
+   // Then, request the user to log in
+   DZ.login(function(response) {
+   	if (response.authResponse) {
+   		console.log('Welcome!  Fetching your information.... ');
+   		DZ.api('/user/me', function(response) {
+   			console.log('Good to see you, ' + response.name + '.');
+   		});
+   	} else {
+   		console.log('User cancelled login or did not fully authorize.');
+   	}
+   }, {perms: 'basic_access,email'});
+
 
 /* MAIN FUNTIONS */
 function displayBoxes() {
@@ -32,22 +67,21 @@ function buildArtistBox(number) {
 
 let div = document.createElement("div");
 div.classList.add("artist-box");
-
-let img = document.createElement("img");
-img.classList.add("artist-box-img");
+//div.style.backgroundImage = "url(https://cdns-images.dzcdn.net/images/artist/f2bc007e9133c946ac3c3907ddc5d2ea/250x250-000000-80-0-0.jpg)"
 //img.src = obj.picture;
-img.alt = "Artist"
+let black =  document.createElement("div");
+black.classList.add("black");
 
 let h4 = document.createElement("h4");
-//h4.innerText = obj.name;
+h4.classList.add("artist-text");
 
 //Append elements
-div.appendChild(img);
-div.appendChild(h4);
+div.appendChild(black);
+black.appendChild(h4);
 
 DZ.api('/artist/'+number, function(response){
   h4.innerText = response.name;
-  img.src = response.picture_medium;
+  div.style.backgroundImage = "url("+ response.picture_medium +")"
   if (response.name != undefined) {
     document.getElementById('box-space').appendChild(div);
   }
@@ -55,4 +89,4 @@ DZ.api('/artist/'+number, function(response){
 
 }
 
-//displayBoxes()
+displayBoxes()

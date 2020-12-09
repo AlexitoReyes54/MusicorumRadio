@@ -2,189 +2,191 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Radio</title>
+    <title>Musicorum</title>
 
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Logo 2-1.png" >
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
 
 <!-- Optional theme -->
-
-<link rel="stylesheet" href="./css/radio.css">
-<link rel="stylesheet" href="./css/scrollbar.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="./awesome/css/font-awesome.min.css">
   </head>
   <body>
 
-    <!-- navbar of the radio -->
-    <nav>
-      <input class="search" placeholder="Search" type="text" name="" value="">
-      <button type="button" class="search-btn" name="button">Buscar</button>
+    <!--NavBar-->
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand "> <h5>Musicorum</h5> </a>
 
+      <a href="./radio.html">
+        <button id="radioBtn"  onmouseover="btnAnimation()" onmouseout="btnNoAnimation()" class="btn btn-outline-primary my-2 my-sm-0 " type="submit">Go to Radio <i class="fa fa-music" aria-hidden="true"></i>  </button>
+       </a>
     </nav>
-    <div style="height: 1px; width: 100%; background-color: #7d7d7d"></div>
 
+    <!--Carousel-->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
 
-  <!-- body of the radio -->
-<h2 id="artist-title"> Top Artists</h2>
-<div id="box-space" class="scrollmenu">
+        <div class="carousel-item active">
 
-
-
-  <div class="artist-box">
-    <div class="black">
-    <h4 class="artist-text">Phoenix</h4>
-    </div>
-    </div>
-
-
-    <div class="artist-box">
-      <div class="black">
-      <h4 class="artist-text">Phoenix</h4>
-      </div>
-      </div>
-
-
-      <div class="artist-box">
-        <div class="black">
-        <h4 class="artist-text">Phoenix</h4>
-        </div>
-        </div>
-
-        <div class="artist-box">
-          <div class="black">
-          <h4 class="artist-text">Phoenix</h4>
-          </div>
-          </div>
-
-
-          <div class="artist-box">
-            <div class="black">
-            <h4 class="artist-text">Phoenix</h4>
-            </div>
+            <div class="d-block w-100 container-fluid slide1">
+              <div class="row">
+                <div class="col-md-8 slide-text-box">
+                  <h2>Ejemplo</h2>
+                    <p>Los términos spam, correo basura,correo no deseado o correo no solicitadohacen referencia a los mensajes de correo electrónico no solicitados,no deseados o con remitente no conocido, habitualmente</p>
+                </div>
+                <div class="col-md-4 slide-img-box">
+                  <img class="slide-img" src="./img/pajarito.svg" alt="">
+                </div>
+              </div>
             </div>
 
+        </div>
 
-            <div class="artist-box">
-              <div class="black">
-              <h4 class="artist-text">Phoenix</h4>
+        <div class="carousel-item">
+
+          <div class="d-block w-100 container-fluid slide1">
+            <div class="row">
+              <div class="col-md-8 slide-text-box">
+                <h2>Mamelo el mejol</h2>
+                  <p>Los términos spam, correo basura,correo no deseado o correo no solicitadohacen referencia a los mensajes de correo electrónico no solicitados,no deseados o con remitente no conocido, habitualmente</p>
               </div>
+              <div class="col-md-4 slide-img-box">
+                <img class="slide-img" src="./img/mamelo.svg" alt="">
               </div>
+            </div>
+          </div>
 
-</div>
+        </div>
 
-<!-- Song list -->
-<h2 id="artist-title">Top Music</h2>
+        <div class="carousel-item">
 
-<div class="song-list" id="song-list">
+          <div class="d-block w-100 container-fluid slide1">
+            <div class="row">
+              <div class="col-md-8 slide-text-box">
+                <h2>lo disca la para</h2>
+                  <p>Los términos spam, correo basura,correo no deseado o correo no solicitadohacen referencia a los mensajes de correo electrónico no solicitados,no deseados o con remitente no conocido, habitualmente</p>
+              </div>
+              <div class="col-md-4 slide-img-box">
+                <img class="slide-img" src="./img/lodisca.svg" alt="">
+              </div>
+            </div>
+          </div>
 
-  <table class="table table-hover table-dark">
-    <thead>
-  <tr>
-    <th scope="col">#</th>
-    <th scope="col">Song</th>
-    <th scope="col">Artist</th>
-    <th scope="col">length</th>
-  </tr>
-</thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Friendzone</td>
-      <td>Twenty one Pilots</td>
-      <td>3:55</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Friendzone</td>
-      <td>Twenty one Pilots</td>
-      <td>3:55</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Friendzone</td>
-      <td> Twenty one Pilots</td>
-      <td>3:55</td>
-    </tr>
-  </tbody>
-</table>
+        </div>
+      </div>
+    </div>
 
-  <div class="song-item">
-    <img class="song-img" src="daft.jpg" alt="Song">
-    <div class="song-item-text">
-      <h5 class="song-name">Friendzone</h5>
-      <p class="song-artist">Twenty one Pilots</p>
+    <!--tittles Text-->
+    <div class="container-fluid">
+      <div class="row text-rw">
+        <h1 class="">¿Quieres escuchar tu canción favorita?</h1>
+        <a href="./radio.html">
+        <button class="contact-btn" type="button" name="button">Ir a la Radio</button>
+      </a>
+      </div>
+    </div>
+
+       <!--Music Boxes-->
+       <div class="container">
+        <div class="row">
+          <div onmouseover="showPlay(this)" onmouseout="hidePlay(this)" class="col-md-4 box-box">
+            <div  class="shadow"> <p>Play Albun</p> <i class="fa fa-play-circle-o fa-5x" aria-hidden="true"></i> </div>
+            <img src="https://e-cdns-images.dzcdn.net/images/cover/406f99fbbb8f44475d4507e373e46f5c/250x250-000000-80-0-0.jpg" alt="Mamelo el mejol" class="index-box">
+          </div>
+          <div onmouseover="showPlay(this)" onmouseout="hidePlay(this)" class="col-md-4 box-box">
+            <div  class="shadow"><p>Play Albun</p> <i class="fa fa-play-circle-o fa-5x" aria-hidden="true"></i> </div>
+            <img src="https://cdns-images.dzcdn.net/images/cover/b310009833478f1033113a882f5f725c/250x250-000000-80-0-0.jpg" alt="Mamelo el mejol" class="index-box">
+          </div>
+          <div onmouseover="showPlay(this)" onmouseout="hidePlay(this)" class="col-md-4 box-box">
+            <div  class="shadow"> <p>Play Albun</p><i class="fa fa-play-circle-o fa-5x" aria-hidden="true"></i> </div>
+            <img src="https://e-cdns-images.dzcdn.net/images/cover/c42ab7469ac212b3b4a5f51d867a3688/250x250-000000-80-0-0.jpg" alt="Mamelo el mejol" class="index-box">
+          </div>
+        </div>
+      </div>
+
+
+        <!--Texto-->
+        <div class="container">
+          <div class="row info-box">
+
+            <div class="col-md-8 index-box-t1">
+              <h1 class="index-title">Listen to your fav Music</h1>
+                <p class="index-text">'lorem ipsum' will uncover
+                  many web sites still in their infancy. Various versions have evolved
+                  over the years, sometimes by accident, sometimes on purpose (injected
+                  humour and the like).
+                </p>
+            </div>
+            <div class="col-md-4">
+              <img src="./img/modern.svg" alt="Mamelo el mejol" class="index-img">
+            </div>
+          </div>
+
+          <div class="row info-box">
+
+            <div class="col-md-4">
+              <img src="./img/music.svg" alt="Mamelo el mejol" class="index-img">
+            </div>
+
+
+            <div class="col-md-8 index-box-t2">
+              <h1 class="index-title">Listen to your fav Music</h1>
+                <p class="index-text">'lorem ipsum' will uncover
+                  many web sites still in their infancy. Various versions have evolved
+                  over the years, sometimes by accident, sometimes on purpose (injected
+                  humour and the like).
+                </p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="container-fluid contact">
+
+
+
+          <h3>Contacta con nosotros</h3>
+          <a href="./radio.html">
+          <button class="contact-btn" type="button" name="button">Ir a pagina de contacto</button>
+        </a>
+        </div>
+
+<footer>
+  <div class="social">
+    <div class="network">
+      <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+    </div>
+
+    <div class="network">
+      <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+    </div>
+
+    <div class="network">
+      <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
     </div>
   </div>
 
-
-</div>
-
-<!-- Music generes -->
-<h2 id="artist-title">Top Genres</h2>
-<div id="box-space" class="scrollmenu">
-
-  <div class="genre-box">
-    <div class="black">
-    <h4 class="artist-text">Rock</h4>
-    </div>
-    </div>
-
-    <div class="genre-box">
-      <div class="black">
-      <h4 class="artist-text">Rock</h4>
-      </div>
-      </div>
-
-      <div class="genre-box">
-        <div class="black">
-        <h4 class="artist-text">Rock</h4>
-        </div>
-        </div>
-        <div class="genre-box">
-          <div class="black">
-          <h4 class="artist-text">Rock</h4>
-          </div>
-          </div>
-
-          <div class="genre-box">
-            <div class="black">
-            <h4 class="artist-text">Rock</h4>
-            </div>
-            </div>
-
-</div>
-
-<!-- Music pleyer -->
-
-<section class="music-player">
-  <div class="player-info-box">
-  <img class="player-img" src="daft.jpg" alt="">
-  <h5  class="player-song-name">Friendzone</h5>
+  <div class="links">
+    <a href="#" target="_blank">Conctact *</a>
+    <a href="https://github.com/AlexitoReyes54/MusicorumRadio" target="_blank">Repository</a>
+    <a href="#" target="_blank">* Suport</a>
   </div>
 
-  <div class="controllers">
-<div class="player-controllers-box">
-  <button  class="player-controller" type="button" name="play"><img class="player-icon" src="./icons/play.svg"></button>
-  <button class="player-controller" type="button" name="pause"><img class="player-icon" src="./icons/pause.svg"></button>
-</div>
-<div class="song-time-box">
-  <p id="timer" class="player-timer">00:00</p>
-  <div id="timeline"class="timeline"></div>
-</div>
-</div>
+  <p>Terms of use privacy policy</p>
+  <p>2020 Musicorum</p>
+</footer>
 
-</section>
-</div>
-
-    <!-- deezer api -->
-    <div id="dz-root"></div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="https://cdns-files.dzcdn.net/js/min/dz.js"></script>
-   <script src="./js/artist.js" type="text/javascript"></script>
-   <script src="./js/default-Songs.js" type="text/javascript"></script>
+    <script src="./js/animations.js">  </script>
+
+
   </body>
 
 </html>
