@@ -28,7 +28,6 @@ black1.appendChild(h4);
 
 DZ.api('/genre/'+number, function(response){
   h4.innerText = response.name;
-  console.log(response.picture_medium);
   div.style.backgroundImage = "url("+ response.picture_medium +")"
   if (response.picture_medium != undefined) {
     document.getElementById('box-space-genre').appendChild(div);
@@ -45,7 +44,7 @@ function showGenreMusic(genre) {
 
   DZ.api('/genre/'+genre, function(response){
     root.innerHTML = '  <div id="mainImg" class="main-image">\
-        <p href="#" class="back" onclick="location.reload();"> Volver </p>\
+        <p href="#" class="back" onclick="location.reload();"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Volver </p>\
         <div  class="black-main">\
           <h1 id="mainText" class="text-main">Pop Music</h1>\
         </div>\
@@ -60,12 +59,6 @@ function showGenreMusic(genre) {
     </tr>\
   </thead>\
     <tbody id="songs-list">\
-      <tr>\
-        <th scope="row">1</th>\
-        <td>Friendzone</td>\
-        <td>Twenty one Pilots</td>\
-        <td>3:55</td>\
-      </tr>\
     </tbody>\
     </table>';
 
@@ -75,7 +68,7 @@ function showGenreMusic(genre) {
     mainText.innerText = response.name;
     //bigImage.style.backgroundImage = "url("+ response.picture_medium +")"
 
-    displaySongsDetail(identifyGenre(response.name))
+    displaySongsDetailx(identifyGenre(response.name))
   });
 
 }

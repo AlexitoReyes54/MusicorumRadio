@@ -2,18 +2,18 @@
 
 
 function hello() {
-  document.getElementById("web-body").classList.add("invisible")  
+  document.getElementById("web-body").classList.add("invisible")
   setTimeout(function () {
 
     document.getElementById("web-body").classList.remove("invisible")
     document.getElementById("web-body").classList.add("visible")
-  }, 2000);
+  }, 100);
 }
 
 document.getElementById("web-body").addEventListener("onload",hello());
 
    DZ.init({
-     appId  : '439622',
+     appId  : '450622',
      channelUrl : 'http://127.0.0.1:3000/channel.html',
      player: {
    			container: 'player',
@@ -25,6 +25,18 @@ document.getElementById("web-body").addEventListener("onload",hello());
    		}
    });
 
+
+   // Then, request the user to log in
+   DZ.login(function(response) {
+   	if (response.authResponse) {
+   		console.log('Welcome!  Fetching your information.... ');
+   		DZ.api('/user/me', function(response) {
+   			console.log('Good to see you, ' + response.name + '.');
+   		});
+   	} else {
+   		console.log('User cancelled login or did not fully authorize.');
+   	}
+   }, {perms: 'basic_access,email'});
 
 
 /* MAIN FUNTIONS */
@@ -69,7 +81,6 @@ black.appendChild(h4);
 
 DZ.api('/artist/'+number, function(response){
   h4.innerText = response.name;
-  console.log(response.name);
   div.style.backgroundImage = "url("+ response.picture_medium +")"
   if (response.name != undefined) {
     document.getElementById('box-space').appendChild(div);

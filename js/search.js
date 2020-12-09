@@ -4,7 +4,7 @@ function search() {
   let keywords = document.getElementById("key").value
   console.log(keywords);
 let root = document.getElementById('root');
-root.innerHTML = '<br> <p href="#" class="back" onclick="location.reload();"> Volver </p><br><br>\
+root.innerHTML = '<br> <p href="#" class="back" onclick="location.reload();"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Volver </p><br><br>\
 <table class="table table-hover table-dark table-detail">\
   <thead>\
 <tr>\
@@ -21,6 +21,11 @@ root.innerHTML = '<br> <p href="#" class="back" onclick="location.reload();"> Vo
 </table>';
 
   DZ.api('/search/track?q='+keywords, function(response){
-    console.log(response);
+    console.log(response.data[0]);
+    //buildSongItem(response.data[0].id,1)
+
+    for (var i = 0; i < 20; i++) {
+      buildSongItem(response.data[i].id,i+1)
+    }
   });
 }

@@ -72,14 +72,18 @@ input.search{
   color: #fff;
   font-size: 20px;
       border-bottom-left-radius: 10px;
+
+
 }
 button.search-btn{
   width: 20%;
-  background-color: #E3651C;
+  background-color: #4A469E;
   border:0px;
   color: #fff;
   font-weight: bolder;
   border-bottom-right-radius: 10px;
+  background: rgb(50,97,200);
+
 }
 
 

@@ -15,6 +15,12 @@ function displaySongsDetail(array) {
   }
 }
 
+function displaySongsDetailx(array) {
+  for (var i = 0; i < 10; i++) {
+    buildSongItem(array[i],i+1)
+  }
+}
+
 /* NUMERIC OPERATIONS */
 function randomNumber7digit() {
   let res = "31353";
@@ -28,7 +34,7 @@ function randomNumber7digit() {
 
 function buildSongItem(number,index) {
   let tr = document.createElement("tr");
-  tr.onclick = function() {hello(number)};
+  tr.onclick = function() {play(number)};
 
   let th = document.createElement("th");
   th.style.scope = "row"
@@ -60,7 +66,7 @@ function buildSongItem(number,index) {
 
 }
 
-function hello(number) {
+function play(number) {
   //alert("ok ok")
   DZ.player.playTracks([number])
 }
